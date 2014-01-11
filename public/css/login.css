@@ -1,0 +1,170 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#555555), to(#111111));
+  background-image: -webkit-linear-gradient(top, #555555, 0%, #111111, 100%);
+  background-image: -moz-linear-gradient(top, #555555 0%, #111111 100%);
+  background-image: linear-gradient(to bottom, #555555 0%, #111111 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff111111', GradientType=0);
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+}
+a.grey {
+  color: #aaaaaa;
+}
+a.blue {
+  font-weight: bold;
+}
+@media (max-width: 400px) {
+  a.grey,
+  a.blue {
+    font-size: 12px;
+  }
+}
+#container {
+	top: 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: 20px;
+	padding-bottom: 25px;
+	height: 379px;
+}
+@media (max-width: 480px) {
+  #container {
+    margin: 20px 5% 0;
+    left: auto;
+    width: 90%;
+  }
+}
+#logo,
+#loginbox {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media (max-width: 480px) {
+  #logo,
+  #loginbox {
+    width: 100%;
+  }
+}
+#logo {
+  padding: 100px 0 20px 5px;
+}
+#logo img {
+  width: 340px;
+  margin: 0 auto;
+  display: block;
+}
+#user {
+  width: 100%;
+  height: 100px;
+  opacity: 0;
+}
+
+#user .text {
+  top: 17px;
+  left: 150px;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
+}
+#user .user_name {
+  display: block;
+  font-size: 24px;
+}
+#loginbox {
+  height: 240px;
+  background: #ffffff;
+  box-shadow: 0 0 4px #000000;
+  border-radius: 7px;
+  overflow: hidden !important;
+  text-align: center;
+  position: relative;
+}
+#loginbox form {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#loginbox form#loginform {
+  z-index: 200;
+}
+
+#loginbox p {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+@media (max-width: 400px) {
+  #loginbox p {
+    font-size: 12px !important;
+  }
+}
+#loginbox .form-actions {
+  padding: 5px 20px 15px;
+  border-radius: 0 0 30px 30px;
+}
+
+.input-group {
+  padding: 0 20px 5px;
+}
+.footer-login {
+  border-top: 1px solid #e6e6e6;
+}
+.footer-login .text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+  padding: 12px 20px;
+}
+.btn-inverse {
+  color: #ffffff;
+  background-color: #555555;
+  border-color: #494949;
+}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.open .dropdown-toggle.btn-inverse {
+  color: #ffffff;
+  background-color: #414141;
+  border-color: #2a2a2a;
+}
+.btn-inverse:active,
+.btn-inverse.active,
+.open .dropdown-toggle.btn-inverse {
+  background-image: none;
+}
+.btn-inverse.disabled,
+.btn-inverse[disabled],
+fieldset[disabled] .btn-inverse,
+.btn-inverse.disabled:hover,
+.btn-inverse[disabled]:hover,
+fieldset[disabled] .btn-inverse:hover,
+.btn-inverse.disabled:focus,
+.btn-inverse[disabled]:focus,
+fieldset[disabled] .btn-inverse:focus,
+.btn-inverse.disabled:active,
+.btn-inverse[disabled]:active,
+fieldset[disabled] .btn-inverse:active,
+.btn-inverse.disabled.active,
+.btn-inverse[disabled].active,
+fieldset[disabled] .btn-inverse.active {
+  background-color: #555555;
+  border-color: #494949;
+}
+
+hr {
+  margin: 8px 0 -5px;
+}
