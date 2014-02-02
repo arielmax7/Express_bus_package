@@ -15,6 +15,48 @@
 //llamamos al controlador RESTFUL  Esto enrutara a todos los metodos a la vez
 
 Route::get('/', function()
+{	
+    return View::make('login');	
+
+});
+
+//login
+Route::post('login', 'UserLogin@user');
+//logout
+Route::get('logout', function()
 {
-    return View::make ('login');
+    Auth::logout();
+    return Redirect::to('/');
+});
+// ruta de administracion
+Route::get('admin', array('before' => 'auth', function()
+{
+    return View::make('dashboard.index');	
+}));
+
+
+//rutas del sistema
+Route::controller('package', 'PackageController');
+
+
+
+
+
+
+
+Route::get('registrar', function()
+{
+
+	$user = new User;
+	$user->name = "Mario";
+	$user->last_name = "Valle";
+	$user->email = "marito@gmail.com";
+	$user->address = "calle centenario #222";
+        $user->phone = 45882222;
+        $user->username = "mario2";
+	$user->level = 0;
+        $user->password = Hash::make('123');
+	// guardamos
+	$user->save();
+	return "El usuario fue agregado.";
 });
