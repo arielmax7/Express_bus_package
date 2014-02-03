@@ -1,3 +1,5 @@
+@if(Auth::check())
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,7 +46,7 @@
                    
                     <li id="fat-menu" class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-user"></i> Ariel Max
+                            <i class="icon-user"></i> {{ Auth::user()->username }}
                             <i class="icon-caret-down"></i>
                         </a>
 
@@ -54,7 +56,7 @@
                             <li><a tabindex="-1" class="visible-phone" href="#">Opciones</a></li>
                             <li class="divider visible-phone"></li>
                             
-                            <li><a tabindex="-1" href="sign-in.html"><i class="icon-off"></i> Logout</a></li>
+                            <li><a tabindex="-1" href="logout"><i class="icon-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     
@@ -71,7 +73,7 @@
             <div id="phone-navigation" class="visible-xs">
                 <ul id="dashboard-menu" class="nav nav-list">
                     
-                    <li class="active "><a rel="tooltip" data-placement="right" data-original-title="Dashboard" href="index.html"><i class="icon-home"></i> <span class="caption">Administración</span></a></li>
+                    <li class="active "><a rel="tooltip" data-placement="right" data-original-title="Dashboard" href="admin"><i class="icon-home"></i> <span class="caption">Administración</span></a></li>
                     
                     
                     <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Reports" href="reports.html"><i class="icon-bar-chart"></i> <span class="caption">Reportes</span></a></li>
@@ -80,37 +82,37 @@
                     <li class=" "><a rel="tooltip" data-placement="right" data-original-title="UI Features" href="components.html"><i class="icon-briefcase"></i> <span class="caption">Paquetes</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Pricing" href="pricing.html"><i class="icon-magic"></i> <span class="caption">Pricing</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Pricing" href="pricing.html"><i class="icon-magic"></i> <span class="caption">Precios</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Media" href="media.html"><i class="icon-film"></i> <span class="caption">Media</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Media" href="users"><i class="icon-film"></i> <span class="caption">Usuarios</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Blog" href="blog.html"><i class="icon-beaker"></i> <span class="caption">Blog</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Blog" href="blog.html"><i class="icon-beaker"></i> <span class="caption">Mensajes</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Blog Entry" href="blog-item.html"><i class="icon-coffee"></i> <span class="caption">Blog Entry</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Blog Entry" href="blog-item.html"><i class="icon-coffee"></i> <span class="caption">Plantillas</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Help" href="help.html"><i class="icon-question-sign"></i> <span class="caption">Help</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Help" href="help.html"><i class="icon-question-sign"></i>Ayuda</a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Faq" href="faq.html"><i class="icon-book"></i> <span class="caption">Faq</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Faq" href="faq.html"><i class="icon-book"></i> <span class="caption">Vacío</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Calendar" href="calendar.html"><i class="icon-calendar"></i> <span class="caption">Calendar</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Calendar" href="calendar.html"><i class="icon-calendar"></i> <span class="caption">Vacío</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Forms" href="forms.html"><i class="icon-tasks"></i> <span class="caption">Forms</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Forms" href="forms.html"><i class="icon-tasks"></i> <span class="caption">Vacío</span></a></li>
                     
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Tables" href="tables.html"><i class="icon-table"></i> <span class="caption">Tables</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Tables" href="tables.html"><i class="icon-table"></i> <span class="caption">Vacío</span></a></li>
                     
                     
                     
-                    <li class=" theme-mobile-hack hidden-xs"><a rel="tooltip" data-placement="right" data-original-title="Mobile" href="mobile.html"><i class="icon-comment-alt"></i> <span class="caption">Mobile</span></a></li>
+                    <li class=" theme-mobile-hack hidden-xs"><a rel="tooltip" data-placement="right" data-original-title="Mobile" href="mobile.html"><i class="icon-comment-alt"></i> <span class="caption">Vacío</span></a></li>
                     
-                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Icons" href="icons.html"><i class="icon-heart"></i> <span class="caption">Icons</span></a></li>
+                    <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Icons" href="icons.html"><i class="icon-heart"></i> <span class="caption">Vacío</span></a></li>
                     
                     
                 </ul>
@@ -151,7 +153,7 @@
             <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Pricing" href="pricing.html"><i class="icon-money"></i> <span class="caption">Precios</span></a></li>
             
             
-            <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Media" href="media.html"><i class="icon-group"></i> <span class="caption">Usuarios</span></a></li>
+            <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Media" href="<?=URL::to('users'); ?>"><i class="icon-group"></i> <span class="caption">Usuarios</span></a></li>
             
             
             <li class=" "><a rel="tooltip" data-placement="right" data-original-title="Blog" href="blog.html"><i class="icon-envelope"></i> <span class="caption">Mensajes</span></a></li>
@@ -588,6 +590,8 @@
             $('.demo-cancel-click').click(function(){return false;});
         });
     </script>
+
+    @endif
     
   </body>
 </html>

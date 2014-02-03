@@ -37,7 +37,7 @@ Route::get('admin', array('before' => 'auth', function()
 
 //rutas del sistema
 Route::controller('package', 'PackageController');
-
+Route::controller('users', 'UsersController');
 
 
 
@@ -48,12 +48,12 @@ Route::get('registrar', function()
 {
 
 	$user = new User;
-	$user->name = "Mario";
-	$user->last_name = "Valle";
-	$user->email = "marito@gmail.com";
-	$user->address = "calle centenario #222";
-        $user->phone = 45882222;
-        $user->username = "mario2";
+	$user->name = "Maria";
+	$user->last_name = "Gonzales";
+	$user->email = "maria@gmail.com";
+	$user->address = "calle 20 de mayo #100";
+        $user->phone = 5452100;
+        $user->username = "maria";
 	$user->level = 0;
         $user->password = Hash::make('123');
 	// guardamos
