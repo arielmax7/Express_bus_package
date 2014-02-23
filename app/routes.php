@@ -14,6 +14,8 @@
 
 //llamamos al controlador RESTFUL  Esto enrutara a todos los metodos a la vez
 
+
+
 Route::get('/', function()
 {	
     return View::make('login');	
@@ -38,7 +40,7 @@ Route::get('admin', array('before' => 'auth', function()
 //rutas del sistema
 Route::controller('package', 'PackageController');
 Route::controller('users', 'UsersController');
-
+Route::controller('user/getuser', 'getuserController');
 
 
 
@@ -48,12 +50,12 @@ Route::get('registrar', function()
 {
 
 	$user = new User;
-	$user->name = "Maria";
-	$user->last_name = "Gonzales";
-	$user->email = "maria@gmail.com";
-	$user->address = "calle 20 de mayo #100";
+	$user->name = "Pedro";
+	$user->last_name = "Sanchez";
+	$user->email = "peds@gmail.com";
+	$user->address = "calle junin #100";
         $user->phone = 5452100;
-        $user->username = "maria";
+        $user->username = "pe";
 	$user->level = 0;
         $user->password = Hash::make('123');
 	// guardamos

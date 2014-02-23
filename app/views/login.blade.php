@@ -23,7 +23,7 @@
                     @endif
                                   
                     <div class="input-group input-sm">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span><input class="form-control" id="username" placeholder="Usuario" type="text" name="username">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></i></span><input class="form-control" id="username" placeholder="Usuario" type="text" name="username">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-lock"></i></span><input class="form-control" id="password" placeholder="Contraseña" type="password" name="password">
